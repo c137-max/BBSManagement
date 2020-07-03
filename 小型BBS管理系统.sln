@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "小型BBS管理系统", "小型BBS管理系统.csproj", "{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="小型BBS管理系统.MvcApplication" Language="C#" %>

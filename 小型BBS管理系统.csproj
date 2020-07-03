@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B17A0AC2-5BFD-4169-9D80-6D44E7025B77}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>小型BBS管理系统</RootNamespace>
+    <AssemblyName>小型BBS管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\BusinessLogicLayer\CommentManagement.cs" />
+    <Compile Include="App_Code\BusinessLogicLayer\PostManagement.cs" />
+    <Compile Include="App_Code\BusinessLogicLayer\Users.cs" />
+    <Compile Include="App_Code\DataAccessLayer\ConnectDatabase.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\Admin.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\AdminBase.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>AdminBase.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\AdminBase.master.designer.cs">
+      <DependentUpon>AdminBase.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\UserAdd.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\UserAdd.aspx.designer.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasePage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>BasePage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasePage.master.designer.cs">
+      <DependentUpon>BasePage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\index.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Passage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Passage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Passage.aspx.designer.cs">
+      <DependentUpon>Passage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PostMsg.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PostMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PostMsg.aspx.designer.cs">
+      <DependentUpon>PostMsg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Pages\AdminPages\Admin.aspx" />
+    <Content Include="Pages\AdminPages\AdminBase.master" />
+    <Content Include="Pages\AdminPages\UserAdd.aspx" />
+    <Content Include="Pages\BasePage.master" />
+    <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\Passage.aspx" />
+    <Content Include="Pages\PostMsg.aspx" />
+    <Content Include="Public\css\layui.css" />
+    <Content Include="Public\css\layui.mobile.css" />
+    <Content Include="Public\css\modules\code.css" />
+    <Content Include="Public\css\modules\laydate\default\laydate.css" />
+    <Content Include="Public\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Public\css\modules\layer\default\icon.png" />
+    <Content Include="Public\css\modules\layer\default\layer.css" />
+    <Content Include="Public\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Public\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Public\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Public\font\iconfont.eot" />
+    <Content Include="Public\font\iconfont.svg" />
+    <Content Include="Public\font\iconfont.ttf" />
+    <Content Include="Public\font\iconfont.woff" />
+    <Content Include="Public\font\iconfont.woff2" />
+    <Content Include="Public\images\face\0.gif" />
+    <Content Include="Public\images\face\1.gif" />
+    <Content Include="Public\images\face\10.gif" />
+    <Content Include="Public\images\face\11.gif" />
+    <Content Include="Public\images\face\12.gif" />
+    <Content Include="Public\images\face\13.gif" />
+    <Content Include="Public\images\face\14.gif" />
+    <Content Include="Public\images\face\15.gif" />
+    <Content Include="Public\images\face\16.gif" />
+    <Content Include="Public\images\face\17.gif" />
+    <Content Include="Public\images\face\18.gif" />
+    <Content Include="Public\images\face\19.gif" />
+    <Content Include="Public\images\face\2.gif" />
+    <Content Include="Public\images\face\20.gif" />
+    <Content Include="Public\images\face\21.gif" />
+    <Content Include="Public\images\face\22.gif" />
+    <Content Include="Public\images\face\23.gif" />
+    <Content Include="Public\images\face\24.gif" />
+    <Content Include="Public\images\face\25.gif" />
+    <Content Include="Public\images\face\26.gif" />
+    <Content Include="Public\images\face\27.gif" />
+    <Content Include="Public\images\face\28.gif" />
+    <Content Include="Public\images\face\29.gif" />
+    <Content Include="Public\images\face\3.gif" />
+    <Content Include="Public\images\face\30.gif" />
+    <Content Include="Public\images\face\31.gif" />
+    <Content Include="Public\images\face\32.gif" />
+    <Content Include="Public\images\face\33.gif" />
+    <Content Include="Public\images\face\34.gif" />
+    <Content Include="Public\images\face\35.gif" />
+    <Content Include="Public\images\face\36.gif" />
+    <Content Include="Public\images\face\37.gif" />
+    <Content Include="Public\images\face\38.gif" />
+    <Content Include="Public\images\face\39.gif" />
+    <Content Include="Public\images\face\4.gif" />
+    <Content Include="Public\images\face\40.gif" />
+    <Content Include="Public\images\face\41.gif" />
+    <Content Include="Public\images\face\42.gif" />
+    <Content Include="Public\images\face\43.gif" />
+    <Content Include="Public\images\face\44.gif" />
+    <Content Include="Public\images\face\45.gif" />
+    <Content Include="Public\images\face\46.gif" />
+    <Content Include="Public\images\face\47.gif" />
+    <Content Include="Public\images\face\48.gif" />
+    <Content Include="Public\images\face\49.gif" />
+    <Content Include="Public\images\face\5.gif" />
+    <Content Include="Public\images\face\50.gif" />
+    <Content Include="Public\images\face\51.gif" />
+    <Content Include="Public\images\face\52.gif" />
+    <Content Include="Public\images\face\53.gif" />
+    <Content Include="Public\images\face\54.gif" />
+    <Content Include="Public\images\face\55.gif" />
+    <Content Include="Public\images\face\56.gif" />
+    <Content Include="Public\images\face\57.gif" />
+    <Content Include="Public\images\face\58.gif" />
+    <Content Include="Public\images\face\59.gif" />
+    <Content Include="Public\images\face\6.gif" />
+    <Content Include="Public\images\face\60.gif" />
+    <Content Include="Public\images\face\61.gif" />
+    <Content Include="Public\images\face\62.gif" />
+    <Content Include="Public\images\face\63.gif" />
+    <Content Include="Public\images\face\64.gif" />
+    <Content Include="Public\images\face\65.gif" />
+    <Content Include="Public\images\face\66.gif" />
+    <Content Include="Public\images\face\67.gif" />
+    <Content Include="Public\images\face\68.gif" />
+    <Content Include="Public\images\face\69.gif" />
+    <Content Include="Public\images\face\7.gif" />
+    <Content Include="Public\images\face\70.gif" />
+    <Content Include="Public\images\face\71.gif" />
+    <Content Include="Public\images\face\8.gif" />
+    <Content Include="Public\images\face\9.gif" />
+    <Content Include="Public\layui.all.js" />
+    <Content Include="Public\layui.js" />
+    <Content Include="Public\lay\modules\carousel.js" />
+    <Content Include="Public\lay\modules\code.js" />
+    <Content Include="Public\lay\modules\colorpicker.js" />
+    <Content Include="Public\lay\modules\element.js" />
+    <Content Include="Public\lay\modules\flow.js" />
+    <Content Include="Public\lay\modules\form.js" />
+    <Content Include="Public\lay\modules\jquery.js" />
+    <Content Include="Public\lay\modules\laydate.js" />
+    <Content Include="Public\lay\modules\layedit.js" />
+    <Content Include="Public\lay\modules\layer.js" />
+    <Content Include="Public\lay\modules\laypage.js" />
+    <Content Include="Public\lay\modules\laytpl.js" />
+    <Content Include="Public\lay\modules\mobile.js" />
+    <Content Include="Public\lay\modules\rate.js" />
+    <Content Include="Public\lay\modules\slider.js" />
+    <Content Include="Public\lay\modules\table.js" />
+    <Content Include="Public\lay\modules\transfer.js" />
+    <Content Include="Public\lay\modules\tree.js" />
+    <Content Include="Public\lay\modules\upload.js" />
+    <Content Include="Public\lay\modules\util.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5000</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target> -->
+</Project>

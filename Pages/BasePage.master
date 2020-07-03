@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" CodeBehind="BasePage.aspx.cs" Inherits="小型BBS管理系统.Pages.BasePage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title><asp:ContentPlaceHolder id="titleHolder" runat="server">
+                   </asp:ContentPlaceHolder></title>
+    <link rel="stylesheet" href="../Public/css/layui.css" type="text/css">
+</head>
+<body style="margin:auto;width:80%; border:solid 1px #000; background-color: #d2d2d2;">
+<asp:ContentPlaceHolder id="StylePlaceHolder" runat="server">
+    <style>
+        #content {
+            height: 800px
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</asp:ContentPlaceHolder>
+<script type="text/javascript" src="../Public/layui.js"></script>
+<form id="form1" runat="server">
+    <div style="background-color: #d2d2d2;">
+        <ul class="layui-nav">
+            <li class="layui-nav-item">
+                <a href="/Pages/index.aspx">小型BBS</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="#">发帖</a>
+            </li>
+            <li class="layui-nav-item" style="float: right">
+                <asp:Label runat="server" ID="lblUser"><a href="/Pages/login.aspx">请登录</a></asp:Label>
+                <asp:Label runat="server" ID="lblIsLogin" Visible="False">
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="javascript:;" style="">修改信息</a>
+                    </dd>
+                    <asp:Label ID="lblAdmin" runat="server" Visible="False">
+                        <dd>
+                            <a href="/Pages/AdminPages/Admin.aspx">后台管理</a>
+                        </dd>
+                    </asp:Label>
+                    <dd>
+                        <a href="/Pages/login.aspx" style="">退出登录</a>
+                    </dd>
+                </dl>
+                </asp:Label>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © 易健豪 
+      </div>
+    
+</form>
+<asp:ContentPlaceHolder id="ScriptPlaceHolder" runat="server">
+    <script type="text/javascript">
+        layui.use('element', function(){
+            const element = layui.element;
+        });
+    </script>
+</asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" CodeBehind="AdminBase.aspx.cs" Inherits="小型BBS管理系统.Pages.AdminBase" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="/Public/css/layui.css" type="text/css">
+</head>
+<body>
+
+<asp:ContentPlaceHolder id="StylePlaceHolder" runat="server">
+</asp:ContentPlaceHolder>
+<script type="text/javascript" src="/Public/layui.js"></script>
+<form id="form1" runat="server">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">小型BBS管理后台</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item">
+                    <a href="/Pages/index.aspx">查看网站</a>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    系统管理员
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">退出登录</a>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">用户管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="/Pages/AdminPages/UserAdd.aspx">添加用户</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">删除用户</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">帖子管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">新增帖子</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">删除帖子</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <div style="padding: 15px;">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © 易健豪 - 2020数据库结课作业
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <script src="/Public/layui.js"></script>
+        <script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+      var element = layui.element;
+      
+    });
+    </script>
+        <asp:ContentPlaceHolder id="JSPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
+</body>
+</html>
