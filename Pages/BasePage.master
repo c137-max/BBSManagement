@@ -28,7 +28,7 @@
                 <a href="/Pages/index.aspx">小型BBS</a>
             </li>
             <li class="layui-nav-item">
-                <a href="#">发帖</a>
+                <a href="PostMsg.aspx">发帖</a>
             </li>
             <li class="layui-nav-item" style="float: right">
                 <asp:Label runat="server" ID="lblUser"><a href="/Pages/login.aspx">请登录</a></asp:Label>

@@ -13,6 +13,15 @@ namespace 小型BBS管理系统.Pages {
     public partial class UserAdd {
         
         /// <summary>
+        /// lblUserID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lblUserID;
+        
+        /// <summary>
         /// lblNickName control.
         /// </summary>
         /// <remarks>
@@ -22,31 +31,13 @@ namespace 小型BBS管理系统.Pages {
         protected global::System.Web.UI.WebControls.TextBox lblNickName;
         
         /// <summary>
-        /// lblPassWord control.
+        /// cbxIsAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lblPassWord;
-        
-        /// <summary>
-        /// lblSex control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lblSex;
-        
-        /// <summary>
-        /// cekIsAdmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cekIsAdmin;
+        protected global::System.Web.UI.WebControls.CheckBox cbxIsAdmin;
         
         /// <summary>
         /// Master property.

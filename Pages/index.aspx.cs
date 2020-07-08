@@ -22,7 +22,6 @@ namespace 小型BBS管理系统.Pages
                 for (int i = 0; i < tb.Rows.Count; i++)
                 {
                     var lblContent = new Label();
-                    lblContent.Text = "";
                     lblContent.Text = "</br><div class='layui-card' style='margin:auto;width:99%;'>" + 
                                       $"<div class='layui-card-header'><a href='/Pages/Passage.aspx?id={tb.Rows[i]["post_id"]}'>{tb.Rows[i]["post_title"]}</a></div>" + 
                                       "<div class='layui-card-body'>"+ 
@@ -31,7 +30,7 @@ namespace 小型BBS管理系统.Pages
                     pnlContent.Controls.Add(lblContent);
                 }
             }
-            
+
         }
     }
 }

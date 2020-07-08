@@ -27,7 +27,7 @@
                     系统管理员
                 </li>
                 <li class="layui-nav-item">
-                    <a href="">退出登录</a>
+                    <a href="../login.aspx">退出登录</a>
                 </li>
             </ul>
         </div>
@@ -36,26 +36,10 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test">
                     <li class="layui-nav-item layui-nav-itemed">
-                        <a class="" href="javascript:;">用户管理</a>
-                        <dl class="layui-nav-child">
-                            <dd>
-                                <a href="/Pages/AdminPages/UserAdd.aspx">添加用户</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">删除用户</a>
-                            </dd>
-                        </dl>
+                        <a href="UserManagement.aspx">用户管理</a>
                     </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;">帖子管理</a>
-                        <dl class="layui-nav-child">
-                            <dd>
-                                <a href="javascript:;">新增帖子</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">删除帖子</a>
-                            </dd>
-                        </dl>
                     </li>
                 </ul>
             </div>
@@ -69,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="layui-footer">
+            <div class="layui-footer" style="color: #0C0C0C">
                 <!-- 底部固定区域 -->
                 © 易健豪 - 2020数据库结课作业
             </div>
@@ -79,12 +63,11 @@
         </div>
         <script src="/Public/layui.js"></script>
         <script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-      var element = layui.element;
-      
-    });
-    </script>
+            layui.use('element', 'form', function(){
+                var element = layui.element;
+                var form = layui.form;
+            });
+        </script>
         <asp:ContentPlaceHolder id="JSPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>
     </div>

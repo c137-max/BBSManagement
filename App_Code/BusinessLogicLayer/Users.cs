@@ -56,12 +56,12 @@ namespace 小型BBS管理系统.BusinessLogicLayer
         /// <summary>
         /// 查询用户是否存在，或者是否密码正确
         /// </summary>
-        private bool QueryUser(string userid, string password)
+        private bool QueryUser(string name, string password)
         {
             bool ret;
             var db = new ConnectDatabase(); //实例化一个ConnectDatabase类
             var sql =
-                string.Format($"select * from users where user_id='{userid}' AND password='{password}'");
+                string.Format($"select * from users where nickname='{name}' AND password='{password}'");
             var dr = db.GetDataReader(sql);
             if (dr.HasRows)
             {
@@ -120,19 +120,26 @@ namespace 小型BBS管理系统.BusinessLogicLayer
             return updatedb.UidExecuteNonQuery(sql);
         }
 
-
+        public DataTable QueryAllUsers()
+        {
+            var sql = "SELECT * FROM users";
+                Console.Out.Write(sql);
+            var db = new ConnectDatabase();
+            var tb = db.GetDataSet(sql).Tables[0];
+            return tb;
+        }
         /// <summary>
         /// 删除users表中给定的用户名记录,删除成功，返回非-1
         /// </summary>
         /// <param name="strUsername"></param>
         /// <return></return>
-        public int deleteUser(string strUsername)
+        public bool deleteUser(string strUsername)
         {
             if (!isAdmin)
                 strUsername = this.userid;
             ConnectDatabase delete = new ConnectDatabase();
-            string sql = string.Format($"delete from users  where username='{strUsername}'");
-            return delete.UidExecuteNonQuery(sql);
+            string sql = string.Format($"delete from users  where user_id='{strUsername}'");
+            return delete.UidExecuteNonQuery(sql) != -1;
         }
 
         #endregion 方法

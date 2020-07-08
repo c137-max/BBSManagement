@@ -141,6 +141,13 @@
     <Compile Include="Pages\AdminPages\UserAdd.aspx.designer.cs">
       <DependentUpon>UserAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdminPages\UserManagement.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BasePage.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>BasePage.master</DependentUpon>
@@ -182,6 +189,7 @@
     <Content Include="Pages\AdminPages\Admin.aspx" />
     <Content Include="Pages\AdminPages\AdminBase.master" />
     <Content Include="Pages\AdminPages\UserAdd.aspx" />
+    <Content Include="Pages\AdminPages\UserManagement.aspx" />
     <Content Include="Pages\BasePage.master" />
     <Content Include="Pages\index.aspx" />
     <Content Include="Pages\login.aspx" />

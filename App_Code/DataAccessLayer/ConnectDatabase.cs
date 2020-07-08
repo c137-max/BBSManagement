@@ -73,7 +73,7 @@ namespace 小型BBS管理系统.DataAccessLayer
         /// <returns></returns>
         public int UidExecuteNonQuery(string strSql)
         {
-            var count = -1;
+            var count = 1;
             this.ConOpen();
             try
             {
